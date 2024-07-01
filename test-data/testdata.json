@@ -1,0 +1,13 @@
+{
+  "logInDetails":
+  {
+    "baseURL": "https://app-dev.loyalhealth.com",
+    "email":"murali.sunguluru-emids@loyalhealth.com",
+    "password":"password"
+  },
+  "addUser":
+  {
+    "email":"murali.sunguluru-emids@loyalhealth.com",
+    "queuesName":"emidsDemo1"
+  }
+}
