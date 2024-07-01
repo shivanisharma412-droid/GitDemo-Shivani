@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 import { POManager } from '../../../page-objects/POManager';
 import * as testdata from "../../../test-data/testdata.json";
 
-test('Verifying AddQueues', async ({ page }) => {
+test.only('Verifying AddQueues', async ({ page }) => {
   const poManager: POManager = new POManager(page);
   const loginPage = poManager.getLoginPage();
   const dashBoardPage = poManager.getDashBoardPage();
@@ -29,7 +29,7 @@ test('Verifying AddQueues', async ({ page }) => {
     await addQueuesPage.verifyAddedQueuesList(equesName);
   
 });
-test.only('Verifying AddUser', async ({ page }) => {
+test('Verifying AddUser', async ({ page }) => {
   const poManager: POManager = new POManager(page);
   const loginPage = poManager.getLoginPage();
   const dashBoardPage = poManager.getDashBoardPage();
