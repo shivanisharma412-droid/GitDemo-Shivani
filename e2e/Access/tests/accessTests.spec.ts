@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 import { POManager } from '../../../page-objects/POManager';
 import * as testdata from "../../../test-data/testdata.json";
 
-test.only('Verifying AddQueues', async ({ page }) => {
+test('Verifying AddQueues', async ({ page }) => {
   const poManager: POManager = new POManager(page);
   const loginPage = poManager.getLoginPage();
   const dashBoardPage = poManager.getDashBoardPage();
@@ -70,7 +70,7 @@ test("Verifying Darg and drop", async ({page}) => {
   await dragAndDropPage.dragAndDropPromotedProvider();
 });
 
-test("Verifying selectDates", async ({page}) => {
+test.only("Verifying selectDates", async ({page}) => {
 
   const poManager: POManager = new POManager(page);
 const loginPage = poManager.getLoginPage();
