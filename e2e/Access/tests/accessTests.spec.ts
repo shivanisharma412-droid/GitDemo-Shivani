@@ -47,7 +47,7 @@ test('Verifying AddUser', async ({ page }) => {
   
 });
 
-test("Verifying Darg and drop", async ({page}) => {
+test.only("Verifying Darg and drop", async ({page}) => {
 
   const poManager: POManager = new POManager(page);
   
@@ -70,7 +70,7 @@ test("Verifying Darg and drop", async ({page}) => {
   await dragAndDropPage.dragAndDropPromotedProvider();
 });
 
-test.only("Verifying selectDates", async ({page}) => {
+test("Verifying selectDates", async ({page}) => {
 
   const poManager: POManager = new POManager(page);
 const loginPage = poManager.getLoginPage();
