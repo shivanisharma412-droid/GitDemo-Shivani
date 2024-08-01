@@ -1,0 +1,39 @@
+{
+  "logInDetails":
+  {
+    "baseURL": "https://app-dev.loyalhealth.com",
+    "healthCareURL":"https://dev.scrantonhealth.com/home",
+    "email":"ramani.das-emids@loyalhealth.com",
+    "password":"B@ngkar$3091"
+  },
+  "PromotedProvider":{
+    "SpecialtiesPromotedProvider":"Acute Care testing",
+    "ClinicalTermsPromoteSpecialties":"Abnormal Sense of Taste & Smell"
+  },
+  "chatAnalyticsOverallDateRange":{
+    "StartDate":"04/03/2024",
+    "EndDate":"07/06/2024"
+  },
+  "addUser":
+  {
+    "email":"ramani.das1-emids@loyalhealth.com",
+    "queuesName":"Adding queue test."
+  },
+  "addCannedReplies":
+  {
+    "category":"new category",
+    "queuesName":"Creating new queue",
+    "CannedResponse":"EmidsAutomation"
+  },
+  "EditCannedReplies":
+  {
+    "category":"new patient",
+    "queuesName":"Adding queue test.",
+    "CannedResponse":"EmidsAutomationupdated"
+  },
+  "chatOptionList":{
+    "chatButton":["Find a Doctor", "COVID-19 Information", "Find a Location", "Get Directions"]
+  }
+
+  
+}

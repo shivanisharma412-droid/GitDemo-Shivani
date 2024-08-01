@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "playwright": "^1.44.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.45.0",
+    "@types/node": "^20.14.5",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.4.5",
+    "dotenv-extended": "^2.9.0"
+  },
+  "scripts": {
+    "testsmoke:access:DEV": "cross-env environment_variables=dev npx playwright test",
+    "testsmoke:access:DEVELOPMENT": "cross-env environment_variables=development npx playwright test",
+    "testsmoke:access:PREPROD": "cross-env environment_variables=preprod npx playwright test"
+  }
+}
