@@ -55,7 +55,7 @@ export class ChatAnalyticsOverall {
         this.dateRangeInput.fill(dateRange)
         await this.downloadLink.click();
         await this.page.waitForTimeout(3000);
-        const response = await this.page.waitForResponse(response => response.status() === 404);
+        const response = await this.page.waitForResponse(response => response.status() !== 200);
         if (response) {
             await this.page.close();
         }
