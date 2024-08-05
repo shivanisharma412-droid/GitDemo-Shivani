@@ -21,7 +21,6 @@ export class POManager {
   private dashBoard : DashBoard;
   private addUser : AddUser;
   private liveChataddQueues : LiveChatAddQueues;
-  private chatTrends : ChatTrends;
   private careSearchPromotion : CareSearchPromotion;
   private analyticsTrends:AnalyticsTrends;
   private careSerchSetting:CareSearchSetting;
@@ -37,7 +36,6 @@ export class POManager {
     this.dashBoard = new DashBoard(this.page);
     this.addUser = new AddUser(this.page);
     this.liveChataddQueues = new LiveChatAddQueues(this.page);
-    this.chatTrends = new ChatTrends(this.page);
     this.careSearchPromotion = new CareSearchPromotion(this.page);
     this.analyticsTrends = new AnalyticsTrends(this.page);
     this.careSerchSetting = new CareSearchSetting(this.page);
@@ -70,9 +68,6 @@ export class POManager {
   
   getCareSearchSettingPage():CareSearchSetting{
     return this.careSerchSetting;
-  }
-  getChatTrendsPage():ChatTrends{
-    return this.chatTrends;
   }
   getchatSettingPage():ChatSettingPage{
     return this.chatSettingPage;

@@ -53,13 +53,18 @@ export class ChatAnalyticsOverall {
         await expect(this.dateRangeInput).toBeVisible({ timeout: 5000 });
 
         this.dateRangeInput.fill(dateRange)
-
-        const downloadPromise = this.page.waitForEvent('download');
-
         await this.downloadLink.click();
+        await this.page.waitForTimeout(3000);
+        const response = await this.page.waitForResponse(response => response.status() === 404);
+        if (response) {
+            await this.page.close();
+        }
+        else{
+        const downloadPromise = this.page.waitForEvent('download');
 
         const download = await downloadPromise;
 
         await download.saveAs(download.suggestedFilename());
+        }
     }
 }

@@ -22,6 +22,7 @@ export class LoginPage{
   private continueButton:Locator;
   private readonly password: Locator;
   private readonly logInBtn: Locator;
+  private readonly emailInput: Locator;
  
   constructor(page: Page){
     this.page = page;
@@ -41,10 +42,9 @@ export class LoginPage{
     this.healthCareEmailInput = page.locator("//input[@name='email']");
     this.healthCareContinueButton = page.getByTestId("sign-in-button");
     this.continueButton=page.locator("//button[contains(@class,'ContinueButton')]");
+    this.emailInput =page.locator('//input[@name="email"]')
     this.password = page.locator('[name="password"]');
-    this.logInBtn = page.getByRole('button', { name: 'Log in' });
-    
-    
+    this.logInBtn = page.getByRole('button', { name: 'Log in' });  
   }
    // Navigate to the login page.
   async LoginToApplication(baseURL:string,userName: string,password: string) {
@@ -95,35 +95,46 @@ export class LoginPage{
   }
 }
 
-  async navigateToHelathCare(helathCarePortal:string,emailId:string){
-    try{
-    console.log("Navigate to HealthCare"+helathCarePortal)
-    this.page.goto(helathCarePortal);
+async navigateToHelathCare(helathCarePortal: string, emailId: string) {
+  try {
+    await this.page.goto(process.env.HELATHCAREURL+"client");
+    console.log("Navigate to HealthCare" + helathCarePortal)
+    //this.page.goto(helathCarePortal);
     console.log("Page loaded successfully");
-    await this.healthCareEmailInput.fill(emailId);
-    await this.healthCareContinueButton.click();
-    await this.username.click();
-     await this.username.fill(emailId);
-     //await this.signBtn.click();
-     await this.nextBtn.click();
-  
-    /* Handle Octa verification (2FA) by using push notification option.
-    /  Octa will send verification notification on Octa app on your registered mobile and then verify from there
-    /  approve the verification notification within a second or two as script is running fast.
-    */
-    await this.pushBtn.click({timeout: 5000});
-    await this.page.waitForTimeout(20000);
-    await expect(this.googleAccountVerifyId).toBeVisible({timeout:30000});
-    this.googleAccountVerifyId.click({timeout: 10000});
-    await expect (this.page.locator("//button[contains(@class,'ContinueButton')]")).toBeVisible({timeout:10000});
-    await this.page.locator("//button[contains(@class,'ContinueButton')]").click();
-    await expect(this.findCareLink).toBeVisible({timeout:30000});
+    if ((process.env.ENVIRONMENT) == "dev") {
+      await this.healthCareEmailInput.fill(emailId);
+      await this.healthCareContinueButton.click();
+      await this.username.click();
+      await this.username.fill(emailId);
+      //await this.signBtn.click();
+      await this.nextBtn.click();
+
+      /* Handle Octa verification (2FA) by using push notification option.
+      /  Octa will send verification notification on Octa app on your registered mobile and then verify from there
+      /  approve the verification notification within a second or two as script is running fast.
+      */
+      await this.pushBtn.click({ timeout: 5000 });
+      await this.page.waitForTimeout(20000);
+      await expect(this.googleAccountVerifyId).toBeVisible({ timeout: 30000 });
+      this.googleAccountVerifyId.click({ timeout: 10000 });
+      await expect(this.page.locator("//button[contains(@class,'ContinueButton')]")).toBeVisible({ timeout: 10000 });
+      await this.page.locator("//button[contains(@class,'ContinueButton')]").click();
+      await expect(this.findCareLink).toBeVisible({ timeout: 30000 });
     }
-    catch(err){
-      if (err instanceof Error) 
-        console.log(err.message)
+    else {
+      await this.emailInput.fill(process.env.USER_AUTOMATION_ID ?? '');
+      await this.continueBtn.click();
+      await this.password.click();
+      await this.password.fill(process.env.USER_AUTOMATION_PASSWORD ?? '');
+      await this.logInBtn.click();
+      await expect(this.findCareLink).toBeVisible({ timeout: 30000 });
     }
   }
+  catch (err) {
+    if (err instanceof Error)
+      console.log(err.message)
+  }
+}
 
  
   
