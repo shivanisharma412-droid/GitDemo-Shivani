@@ -99,14 +99,12 @@ async navigateToHelathCare(helathCarePortal: string, emailId: string) {
   try {
     await this.page.goto(process.env.HELATHCAREURL+"client");
     console.log("Navigate to HealthCare" + helathCarePortal)
-    //this.page.goto(helathCarePortal);
     console.log("Page loaded successfully");
     if ((process.env.ENVIRONMENT) == "dev") {
       await this.healthCareEmailInput.fill(emailId);
       await this.healthCareContinueButton.click();
       await this.username.click();
       await this.username.fill(emailId);
-      //await this.signBtn.click();
       await this.nextBtn.click();
 
       /* Handle Octa verification (2FA) by using push notification option.
