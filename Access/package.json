@@ -12,6 +12,7 @@
   "scripts": {
     "testsmoke:access:DEV": "cross-env environment_variables=dev npx playwright test",
     "testsmoke:access:DEVELOPMENT": "cross-env environment_variables=development npx playwright test",
+    "testsmoke:access:DEVELOPMENTDEBUG": "cross-env environment_variables=development npx playwright test --debug",
     "testsmoke:access:PREPROD": "cross-env environment_variables=preprod npx playwright test"
   }
 }

@@ -33,6 +33,10 @@
   },
   "chatOptionList":{
     "chatButton":["Find a Doctor", "COVID-19 Information", "Find a Location", "Get Directions"]
+  },
+  "HealthSystemChat":{
+    "speciality":"general surgery",
+    "zip":"18505"
   }
 
   

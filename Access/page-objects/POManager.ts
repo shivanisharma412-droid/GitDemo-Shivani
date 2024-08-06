@@ -14,6 +14,7 @@ import { LiveChatSetting } from './LiveChatSettingPage';
 import { ChatAnalyticsOverall } from './ChatAnalyticsOverall';
 import { LiveChatCannedReplies } from './LiveChatCannedReplies';
 import { HelathCareSearch } from './HealthCareSearch';
+import { HealthSystemChat } from './HealthSystemChat';
 
 export class POManager {
   private page: Page;
@@ -29,6 +30,7 @@ export class POManager {
   private chatAnalyticsOverallPage: ChatAnalyticsOverall;
   private liveChatCannedRepliesPage:LiveChatCannedReplies;
   private healthCareSearchPage:HelathCareSearch;
+  private healthSystemChatPage:HealthSystemChat
 
   constructor(page: Page) {
     this.page = page;
@@ -44,6 +46,7 @@ export class POManager {
     this.chatAnalyticsOverallPage = new ChatAnalyticsOverall(this.page);
     this.liveChatCannedRepliesPage = new LiveChatCannedReplies(this.page);
     this.healthCareSearchPage =  new HelathCareSearch(this.page);
+    this.healthSystemChatPage = new HealthSystemChat(this.page)
   }
 
   getLoginPage(): LoginPage {
@@ -84,6 +87,9 @@ export class POManager {
   }
   getHealthCareSearchPage():HelathCareSearch{
     return this.healthCareSearchPage;
+  }
+  getHealathSystemChatPage():HealthSystemChat{
+    return this.healthSystemChatPage;
   }
 
 }
