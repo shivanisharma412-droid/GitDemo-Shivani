@@ -1,0 +1,99 @@
+{
+  "LoginData": {
+    "email": "shivani.sharma-emids@loyalhealth.com",
+    "password":"Ishubhi@41219",
+    "loginText": "Log in",
+    "baseURL": "https://app-dev.loyalhealth.com",
+    "CreateCampaignData": {
+      "createCampaignText": "Create a New Campaign",
+      "editCampaignText": "Edit Campaign",
+      "campaignName": "OutreachAutomationCampaign",
+      "updatedCampaignName": "OutreachAutomationCampaignUpdated",
+      "tagName": "Hospital",
+      "tagName1": "Physician Service",
+      "frequencyName": "Automated",
+      "frequencyName1": "One-time",
+      "serviceLineName": "Bariatrics and Weight Loss",
+      "serviceLineName1": "Cancer Care",
+      "contentCategoryName": "Clinical",
+      "contentCategoryName1": "Marketing",
+      "campaignName2":"Outreach Automation Poc",
+      "SegmentText":"Segmentation for lever cirrhosis awareness[Strictly Do not edit]",
+      "SegmentText1":"Segmentation for Cancer [Strictly Do not edit]",
+      "SelectAudienceSegmentationLabelText":"Select Audience Segmentation",
+      "emptyScreenText":"You must select the audience segmentation and markets for this campaign before proceeding.",
+      "activeTabText1":"1. Audience Segmentation",
+      "activeTabText2":"2. Configurations",
+      "activeTabText3":"3. Content",
+      "activeTabText4":"4. Campaign Rules",
+      "activeTabText5":"5. Review",
+      "brandingConfiguration":"Branding Configuration for Lever Cirrhosis[Strictly Do Not Use]",
+      "brandingConfiguration1":"Branding configuration for cancer[Strictly do not edit]",
+      "displayName":"Lever Cirrhosis",
+      "displayName1":"Cancer",
+      "SMSLabel":"SMS Name*",
+      "SMSName":"SMS Outreach ",
+      "SMSContent":"Full Address",
+      "fullAddress":"Bobst Library, 13th Street 70 Washington Square South, Washington, NEW YORK 10012",
+      "campaignCreatedSnackBar":"Campaign created.",
+      "campiagnUpdatedSnackbar":"Campaign updated.",
+      "snackBarText" : "Changes saved.",
+      "snackBarTextOnSMSScreen2" : "SMS created.",
+      "snackBarTextOnEmailScreen2" : "Email created.",
+      "launchModalText" : "Launch your Campaign",
+      "successLaunchMessageOnModal" : "Your campaign has been launched. To make any edits to the campaign after launch, you will have to unlaunch the campaign."
+    },
+    "FilterData":{
+      "campaignStatus":"Draft",
+      "clearFilterText":" Clear Filters"
+    },
+    "SearchData":{
+      "SearchedText1":"Showing 1 results for: ",
+      "SearchedText2":"Showing 0 results for: ",
+      "deleteTextOnEllipsis":"Delete",
+      "textOnDeleteModal":"Are you sure you want to delete this campaign?",
+      "headingOnEditModal":"Editing an active campaign will pause it immediately.",
+      "SearchedText3":"Showing 0 results for: Automations"
+    }
+  },
+  "CampaignLibraryText": {
+    "Email": {
+      "Name": "Automation Email Name"
+    }
+  },
+  "BrandingConfigurationText": {
+    "MarketName": "Guide Integration Test (SouthEast Clone)",
+    "LocationName": "ATHENA - 7 Hills Medical Group",
+    "BrandConfigurationEditName": "aaautomation branding configs To edit",
+    "BrandConfigurationName": "aaaautomation branding configs To delete",
+    "BrandConfigurationDisplayName": "AAAAutomation Branding Configs To Delete",
+    "BrandConfigurationAbbreviatedName": "Automation Brands",
+    "BrandConfigurationAddressLine1": "143/7 Sector-23 Rohini",
+    "BrandConfigurationCity": "Delhi",
+    "BrandConfigurationState": "DELHI",
+    "BrandConfigurationZip": "99501",
+    "BrandConfigurationCopyright": "Copyright",
+    "MarketNameForEdit": "Andy East East"
+  },
+  "SegmentationLibraryText": {
+    "DataSource": "Athena",
+    "TagOptionPhysicianService": "Physician Service",
+    "Name": "Automations Segmentation Create",
+    "SearchedText": "Automations Segmentation",
+    "NameAfterEdit": "automations segmentation Edit",
+    "TagOptionHospital": "Hospital",
+    "Conditions": {
+      "IsAfter": "is after",
+      "IsOneOf": "is one of",
+      "Is": "is"
+    },
+    "IncludeAudience": {
+      "AppointmentDateAfter": "1",
+      "TimeMonth": "Month",
+      "MarketLocationCondition": "Location"    }
+    ,
+    "ExcludeAudience": {
+      "PatientStatusInactive": "Inactive"
+    }
+  }
+}

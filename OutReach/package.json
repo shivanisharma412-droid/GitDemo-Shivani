@@ -1,0 +1,26 @@
+{
+  "name": "loyalhealthautomation",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -rf ./node_modules && npm install",
+    "openreport": "npx playwright show-report",
+    "testsmoke:outreach:DEV": "cross-env environment_variables=dev npx playwright test",
+    "testsmoke:outreach:DEVELOPMENT": "cross-env environment_variables=development npx playwright test",
+    "testsmoke:outreach:PREPROD": "cross-env environment_variables=preprod npx playwright test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.45.1",
+    "@types/node": "^20.14.14",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.4.5",
+    "dotenv-extended": "^2.9.0"
+  },
+  "dependencies": {
+    "playwright": "^1.46.0"
+  }
+}
