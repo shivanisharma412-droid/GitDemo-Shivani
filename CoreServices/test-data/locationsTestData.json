@@ -1,0 +1,28 @@
+{
+    "AddNewLocation": {
+        "LocationName": "Test Location1",
+        "Address1": "Test Address1",
+        "Address2": "Test Address2",
+        "City": "Test City1",
+        "State": "AZ",
+        "ZipCode": "12345",
+        "Phone": "(123) 456-9870",
+        "LocationType": "Clinic"
+    },
+    "SearchLocationDetails": {
+        "searchQuerry": "Test Location1"
+    },
+    "UpdateLocations": {
+        "searchQuerry": "Test Location1",
+        "uploadFilePath": "C:\\Users\\pruthvirajm\\Documents\\ProjectLoyal\\project\\LoyalHealthAutomation\\LoyalHealthAutomation\\LoyalHealthAutomation\\core_services\\test-data",
+        "uploadFileName": "demoImage.jpg",
+        "fax": "(123) 456-9855",
+        "websiteURL": "https://www.google.com",
+        "appointmentURL": "https://www.google.com",
+        "virtualURL": "https://www.google.com",
+        "displayURL": "https://www.google.com"
+    },
+    "LocationsFilters": {
+        "LocationType": "Administrative"
+    }
+}

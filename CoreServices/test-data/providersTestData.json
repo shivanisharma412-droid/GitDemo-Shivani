@@ -1,0 +1,47 @@
+{
+    
+      "addnewProviderDetails":
+      {
+        "NPI": "1234569990",
+        "Specialty": "Radiology",
+        "Degree": "MD",
+        "FirstName": "Demo",
+        "LastName": "Test",
+        "displayName": "Demo Test",
+        "ConditionsAndDieseasesTerm": "Abdominal cramps" ,
+        "TreatementsAndProceduresTerms": "Abdominal Imaging"
+      },
+      "SearchProviderDetails":
+      {
+        "Querry1": "Demo Test",
+        "degree": "MD"
+      },
+      "FilterProvider":
+      {
+        "ProviderSpecialty": "Addiction Medicine",
+        "ProviderLocation": "Abernarthy Medical Center",
+        "DirectoryGroup": "Test Ancillary Location"
+      },
+      "updateProviderDetails":
+      {
+        "providerName": "Demo Test",
+        "uploadPath": "C:\\Users\\pruthvirajm\\Documents\\ProjectLoyal\\project\\LoyalHealthAutomation\\LoyalHealthAutomation\\LoyalHealthAutomation\\core_services\\test-data",
+        "uploadImageName": "demoImage.jpg",
+        "MiddleName": "Practice",
+        "consolePassMsg": "File Uploaded Successfully.",
+        "consoleErrorMsg":"File Upload Failed."
+      },
+      "downloadFile": 
+      {
+        "filePath": "C:\\Users\\pruthvirajm\\Documents\\ProjectLoyal\\project\\LoyalHealthAutomation\\LoyalHealthAutomation\\LoyalHealthAutomation\\core_services\\test-results"
+      },
+      "DeleteProvider": 
+      {
+        "name": "Demo Test",
+        "containsText": "You’ve successfully deleted",
+        "consolePassMsg": "Provider profile deleted successfully",
+        "consoleErrorMsg": "Provider profile not deleted."
+      }
+    
+
+}
